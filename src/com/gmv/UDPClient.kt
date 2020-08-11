@@ -9,7 +9,7 @@ import java.net.InetAddress
 import java.text.MessageFormat
 
 const val STX: Byte = 0x02
-const val RS: Byte = 0x1E
+//const val RS: Byte = 0x1E
 const val ETX: Byte = 0x03
 
 class UDPClient {
@@ -42,7 +42,7 @@ class UDPClient {
                 DataOutputStream(byteArrayOutputStream).use { dataOutputStream ->
                     dataOutputStream.write(STX.toInt())
                     dataOutputStream.writeLong(lat)
-                    dataOutputStream.write(RS.toInt())
+//                    dataOutputStream.write(RS.toInt())
                     dataOutputStream.writeLong(lon)
                     dataOutputStream.write(ETX.toInt())
                     dataOutputStream.flush()
